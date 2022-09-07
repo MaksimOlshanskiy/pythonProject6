@@ -1,0 +1,18 @@
+<h1>Max</h1>
+
+{% load static %}
+
+<a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+<img src="{% static 'portfolio/UbGBK2c-Lbo.jpg' %}">
+
+{% for project in projects %}
+
+<h2>{{ project.title }}</h2>
+<p>{{ project.description }}</p>
+<img src="{{ project.image.url }}" height=420 width = 600>
+{% if project.url %}
+<br><a href="{{ project.url }}">Link</a>
+{% endif %}
+
+
+{% endfor %}
