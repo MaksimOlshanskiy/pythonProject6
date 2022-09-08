@@ -2,10 +2,10 @@
 
 {% block content %}
 
-HELLO BLOG
 
-
+<br>
   <h2>Max has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
+<br>
 {% for blog in blogs %}
 
 <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title}}</h2></a>
